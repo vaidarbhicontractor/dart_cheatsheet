@@ -1,4 +1,4 @@
-Dart_Basic_CheatSheet
+## Dart_Basic_CheatSheet
 
 Hey guys, I found some new stuff called Dart and Flutter Let's talk about that with coffee
 What is Dart?
@@ -39,4 +39,4 @@ Learn Dart Basics in 30 minutes https://www.youtube.com/watch?v=0CTj3x6jgeY
 
 Follow https://www.instagram.com/flutter.mas
 
-ter for more interesting stuff regarding Flutter blush
+ter for more interesting stuff regarding Flutter.
