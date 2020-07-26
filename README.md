@@ -12,11 +12,11 @@ Since Dart is a compiled language so you cannot execute your code directly; inst
 Google's Fuchsia will become widely used and Dart will still be the go to langue on that os.
 ## Dart is a big reason why developers love Flutter...!
 
-    Dart is AOT (Ahead Of Time) compiled to fast, predictable, native code, which allows almost all of Flutter to be written in Dart. This not only makes Flutter fast, virtually everything (including all the widgets) can be customized.
-    Dart can also be JIT (Just In Time) compiled for exceptionally fast development cycles and game-changing workflow including Flutter’s popular sub-second stateful hot reload.
-    Dart makes it easier to create smooth animations and transitions that run at 60fps. Dart can do object allocation and garbage collection without locks. And like JavaScript, Dart avoids preemptive scheduling and shared memory (and thus locks). Because Flutter apps are compiled to native code, they do not require a slow bridge between realms (e.g., JavaScript to native). They also start up much faster.
-    Dart allows Flutter to avoid the need for a separate declarative layout language like JSX or XML, or separate visual interface builders, because Dart’s declarative, programmatic layout is easy to read and visualize. And with all the layout in one language and in one place, it is easy for Flutter to provide advanced tooling that makes layout a snap.
-    Developers have found that Dart is particularly easy to learn because it has features that are familiar to users of both static and dynamic languages.
+ +   Dart is AOT (Ahead Of Time) compiled to fast, predictable, native code, which allows almost all of Flutter to be written in Dart. This not only makes Flutter fast, virtually everything (including all the widgets) can be customized.
+ +   Dart can also be JIT (Just In Time) compiled for exceptionally fast development cycles and game-changing workflow including Flutter’s popular sub-second stateful hot reload.
+ +   Dart makes it easier to create smooth animations and transitions that run at 60fps. Dart can do object allocation and garbage collection without locks. And like JavaScript, Dart avoids preemptive scheduling and shared memory (and thus locks). Because Flutter apps are compiled to native code, they do not require a slow bridge between realms (e.g., JavaScript to native). They also start up much faster.
++    Dart allows Flutter to avoid the need for a separate declarative layout language like JSX or XML, or separate visual interface builders, because Dart’s declarative, programmatic layout is easy to read and visualize. And with all the layout in one language and in one place, it is easy for Flutter to provide advanced tooling that makes layout a snap.
+  +  Developers have found that Dart is particularly easy to learn because it has features that are familiar to users of both static and dynamic languages.
 
 ## From where we learn Dart?
 
