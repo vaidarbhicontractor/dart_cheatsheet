@@ -1,0 +1,479 @@
+
+Print Hello World:-
+
+void main()
+{
+  print("Hello World");
+}
+
+Comments:- (Single line and Multiline)
+
+//this is my first line of code
+
+/*
+abc
+def
+*/
+
+void main()
+{
+  print("My name is Vaidarbhi");
+}
+
+Data Types:-
++ Numbers - int
+ 	    double
++ Strings
++ Booleans
++ Lists (Known as Array)
++ Maps
++ Runes	(Express unicode charaters in a string)	
++ Symbols
+
+(All data types in Dart are objects. Therefore values are by default null)
+
+Variable Declartion:-
+
+int age = 22;
+var age = 22; // it is inferred as integer automatically
+
+String name = "Vaidarbhi";
+var name = "Vaidarbhi";
+
+bool isValid = true;
+var isValid = true;
+
+Literals:-
+
+Suppose we define just values like 
+2;
+"Vaidarbhi";
+5.1;
+true;
+these known as Literals.
+
+Define String Literals:-
+
+String s1 = 'Single';
+String s2 = "Double";
+String s3 = 'It\'s easy';
+String s4 = "It's easy";
+
+String interpolation:-
+String name = "Vaidarbhi";
+String message = "My name is $name";
+
+print("The number of char in String Vaidarbhi is ${name.length}");
+
+Final and Const:-
+
+final name = "Vaidarbhi";
+const PI = 3.14;
+
+final variable can only be set once and initialized when accessed.
+const varaiable is implicitely final but it is a compile time constant.
+instance variable can be final but can't be const so declare const variable with static keyword.
+
+instance variable :-
+Instance Variable is a variable declared inside the class but outside any function(method) or any block of code.
+
+Control flow statement:-
+
+void main(){
+var salary = 25000;
+
+if(salary > 20000){
+print("You got promotion");
+}else{
+print("You need to work hard");
+}
+
+Conditional :-
+
+1. condition ? exp1 : exp2
+if condition is true, evaluates exp1 otherwise return exp2.
+
+void main(){
+int a = 2;
+int b = 3;
+int smallNumber;
+
+if(a<b){
+smallNumber = a;
+}else{
+smallNumber = b;
+}
+
+smallNumber = a < b ? a : b;
+
+2. exp1 ?? exp2
+if exp1 is non-null returns its value otherwise returns exp2
+
+String name = "Vaidarbhi";
+
+String nameToPrint = name ?? "Contractor";
+
+Loop Controls Statement:-
+
+Definite (For)
+Indefinite (While, Do While)
+
+for (var i=0;i<4;i++)
+{
+print("Hello");
+}
+
+List planetList = ["Earth","Mars","Saturn"];
+for(String planet in planetList){
+print(planet);
+}
+
+while(i<4)
+{
+print("Hello");
+i++;
+}
+
+do{
+print("Hello");
+i++;
+} while(i<4);
+
+}
+
+Functions:-
+
+Collection of statements grouped together to perform an operation.
+
+
+void main(){
+findPerimeter(4,2);
+}
+
+void findPerimeter(int length,int breadth){
+int perimeter = 2*(length + breadth);
+}
+
+Optional Named Parameter:-
+
+int findVolume(int length, {int breadth,int height}){
+return length * breadth * height;
+}
+
+var result = findVolume(2,breadth:3,height:10);
+print(result);
+
+Optional Default Parameter:-
+
+int findVolume(int length, int breadth,{int height = 10}){
+return length * breadth * height;
+}
+
+var result = findVolume(2,3);
+ print(result);
+
+Exception Handling :-
+
+When normal flow of program is disrupted and application crashes.
+
+Common exceptions in Dart:-
+
+DeferredLoadException
+FormatException
+IntegerDivisionByZeroException
+IOException
+IsolateSpawnException
+Timeout
+
+Class :-
+
+A class is a blueprint to create objects.
+
+void main(){
+ 
+var student1 = Student();
+student1.id = 23;
+student1.name = "Vaidarbhi";
+print("${student1.id} and ${student1.name}");
+
+student1.study();
+
+}
+
+class Student{
+int id;  //Instance or Field Variable
+String name;  //Instance or Field Variable
+
+void study(){
+print("${this.name} is now studying");
+}
+
+Constructor :-
+
++ You can't have both default and parameterized constructor at the same time.
++ You use multiple named constructor .
+void main(){
+ 
+var student1 = Student(23,"Vaidarbhi");
+print("${student1.id} and ${student1.name}");
+
+student1.study();
+
+}
+
+class Student{
+int id;  //Instance or Field Variable
+String name;  //Instance or Field Variable
+
+//Default constructor :-
+Student(){
+print("This is my default constructor");
+}
+
+//Parameterized constructor (1) :-
+Student(int id,String name){
+this.id = id;
+this.name = name;
+}
+
+//Parameterized constructor (2) :-
+Student(this.id,this.name);
+
+//Named constructor :-
+Student.myCustomConstructor();
+void study(){
+print("${this.name} is now studying");
+}
+
+Getter and Setter :-
+
+// Default getter and setter :-
+student.name = "Vaidarbhi"; //Setter value
+print(student.name); //Getter value
+
+//Custom getter and setter :-
+void set percentage(int markSecured){
+percent = (markSecured ~/500) * 100;
+}
+
+int get percentage{
+return percent;
+}
+
+
+Inheritance :-
+
+Inheritance is a mechanism in which one object acquires properties of its parent class object.
+Single :- class B -> class A
+Multi - level :- class C -> class B -> class A
+Hierarchical :- class B and class C both inherit class A
+
+inheritance provides method overriding.
+
+Method Overriding :-
+
+Method overriding is a mechanism by which the child class redefines a method in its parent class.
+
+Abstract Class :-
+
+Use abstract keyword to declare Abstract Class.
+Abstract class can have Abstract Methods, Normal
+ Methods and Instance Variables as well.
+Abstract class can't be instantiated, Can't create objects.
+
+void main(){
+var rectangle = Rectangle();
+rectangle.draw();
+}
+
+abstract class Shape{
+void draw(); //Abstract Method
+
+void myNormalFunction(){} // Abstract Function
+}
+
+class Rectangle extends Shape{
+void draw(){} //Must overrides method of abstract 
+}
+
+Interface :-
+
+An Interface in dart is a normal class.
+An Interface is used when you need concrete implementation of all of its function within it's sub class.
+Implement multiple classes but can't extend multiple classes in Interface.
+
+Static Variables and Methods :-
+
+You can access static variables and methods with class name only. 
+Static Methods and Variables are also known as Class Methods and Variables.
+Static variables are lazily initialized. (They are not initialized  until they are used in program.)
+This word can't use with static method.
+
+void main(){
+print(Circle.pi);
+}
+
+class Circle{
+ static double pi = 3.14; 
+}
+
+Lambda Expression :-
+
+It is a function without name.
+Also known as anonymous function or lambda.
+
+void main(){
+	Function addTwoNumbers = (int a , int b){
+	var sum = a+b;
+	print(sum);
+	};
+
+//calling lambda function
+addTwoNumbers(2,5);
+}
+
+Higher Order Function :-
+
+It can accept function as a parameter.
+It can return a function.
+Or can do both.
+
+Closure :-
+
+Closure is a special function.
+Within a closure you can mutate (modify) the values of variables present in the parent scope.
+
+void main(){
+
+String message = "Dart is good";
+
+Function showMessage(){
+  message = "Dart is awesome";
+  print(message);
+}; 
+}
+
+List :-
+
+In dart Arrays is known as List.
+Ordered collection (Elements are ordered in sequeence).
+
+Two types :- Fixed Length List => Length oncedefined can't be 		                                     changed.
+ 	   Growable List =>  Length is dynamic. 
+
+
+//Define a list
+
+void main(){
+List<int> numberList = List(5);   //Fixed length
+numberList[0] = 73;
+numberList[1] = 64;
+numberList[2] = 80;
+numberList[3] = 20;
+numberList[4] = 40;
+
+print(numberList[0]);
+
+for(int element in numberList){   // Using individual element.
+     print(element);
+}
+
+numberList.forEach((element) => print(element));  // Using Lambda.
+
+for (int i=0; i<numberList.length;i++){   Using index.
+    print(numberList[i]);
+}
+}
+}
+
+.remove , .add , .removeAt , .clear and so on operations of list can't supported in Fixed - Length List.
+
+void main(){
+
+Elements: 73 64 80 20 40 24 
+Index:       0    1   2   3   4   5
+
+List<int> numberList = List()	//Growable 
+numberList[0].add(73);
+numberList[1].add(64);
+numberList[2].add(80);
+numberList[3].add(20);
+numberList[4].add(40);
+
+
+numberList.add(24);
+
+Also declare growable list like below :-
+List<String> countries = ["India","USA"];  
+
+
+Set :-
+
+Unorder collection of unique items.
+It doesn't contains duplicate elements.
+You can't get elements by index since the items are unordered.
+
+HashSet :-
+
+Implementation of unordered Set.
+It is based on hash-table based Set implementation.
+
+
+void main(){
+Set<String> countries = Set.from(["India", "USA"]); //Method 1 for Set Declaration using list.
+
+Set<int> numberSet = Set();  //Method 2  for Set Declaration using constructor.
+numberSet [0].add(73);
+numberSet [1].add(64);
+numberSet [2].add(80);
+numberSet [3].add(20);
+numberSet [4].add(40);
+
+numberSet.contains(73);    //Returns true if the element is found in set.
+
+}
+
+Map :-
+
+Unorder collection of key-value pair.
+Key Value can be of any object type.
+Each key in a Map should be unique.
+The value can be repeated.
+Commonly called as hash or dictionary.
+Size of Map is not fix, it can increase or decrease as per the number of element.
+
+HashMap :-
+
+Implementation of Map.
+Based on hash-table.
+
+
+void main(){
+Map<String,int> countryDialing = {  //Using Literal.
+"India" : 91,
+"USA" : ,
+};
+
+Map<String,String> fruits = Map();   //Using Constructor.
+fruits["apple"] = "red";
+fruits["banana"] = "yellow";
+
+fruits.containsKey("apple");  //Return true if the key is present.
+fruits.update("apple", (value) => "green");  //Update the value.
+
+
+print(fruits["apple"]);
+
+for(String key in fruits.keys){    //Print all keys.
+print(key);
+}
+
+for(String value in fruits.values){  //Print all values.
+print(value);
+}
+
+fruits.forEach((key,value) => print("key: $key and value: $value")); //Using Lambda.
+
+}
+
+}
